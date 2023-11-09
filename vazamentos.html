@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>UVB-AZURIA</title>
+    <link rel="stylesheet" href="./scr/styles.css" />
+    <script src="./scr/main.js"></script>
+</head>
+
+<body>
+<div id="container">
+        <div id="info">
+            <h1 style="display:block"><span style="float:left;">PROTO_P2P - UHV_3.14159GHz - UVB_AZURIA</span> <span  style="float:right;">CRIPTOGRAFIA SSTV ROBOT36</span></h1><br/><br/>
+
+            <h3 style="text-align:center;;display:block;"><span>Digite "help" Para ver os comandos</span>
+                <br/>
+            </h3>
+    </div>
+
+    <div id="workingdiv">   
+        <div id="consoleinput">
+        C:/Vazamentos><input type="text" id="inputform" autofocus="autofocus" />
+        </div>
+
+
+    </div>
+    </div>
+</body>
+
+<script>
+    
+    var help ="<br/><h3>Comandos de Pastas</h3><div id='archivehead'>dir -------- Mostra pastas/Documentos Disponiveis</div><div id='archivehead'>cd/PASTA --- Entra na pasta selecionada</div><div id='archivehead'>cd.. ------- Sai da pasta atual</div><br/><h3>Comandos da Pagina</h3><div id='archivehead'>reload ----- Recarrega a pagina atual</div><br/>";
+    var cd = "<br/><div id='archivehead'>08/11/2023 14:35 Projeto_Embriao.txt</div><div id='archivehead'>08/11/2023 15:24 Memo_MacJooy.txt</div><div id='archivehead'>08/11/2023 16:46 Memo_Kallista.txt</div><div id='archivehead'>08/11/2023 00:00 001.png</div><div id='archivehead'>08/11/2023 00:00 002.png</div><div id='archivehead'>08/11/2023 00:00 003.png</div><div id='archivehead'>08/11/2023 00:00 004.png</div><div id='archivehead'>08/11/2023 00:00 005.png</div><div id='archivehead'>08/11/2023 00:00 006.png</div><div id='archivehead'>08/11/2023 00:00 007.png</div><div id='archivehead'>08/11/2023 00:00 008.png</div><div id='archivehead'>08/11/2023 00:00 009.png</div><div id='archivehead'>08/11/2023 00:00 010.png</div><br/>";
+    
+    var embriao = "<br/><h3>PROJETO EMBRIAO<h3/><div id='archivehead'>Criadora: Laura Akford<br/><br/>Objetivo: Assegurar a continuitade na capsula 6.<br/><br/>Funcionamento: Divido em 2 partes.<br/>a primeira é uma sala refrigerada com espermatozoides armazenados cuidadosamente, <br/>fizemos uma maquina capaz de desenvolver os embriões sem necessariamente necessitar de um ovulo.<br/>Partos em gravidade 0 podem ser perigosos, por isso temos essa alternativa caso os humanos<br/>na capsula não consigam reproduzir naturalmente dentro dela.<br/><br/>A segunda parte consiste em pequenas capsulas, uma para cada clã, <br/>onde caso o protocolo de segurança seja ativado,<br/>os jovens a bordo devem se auto congelar.<br/>assim assegurando que chegarão vivos em Azuria.<br/><br/>A segunda parte obviamente será usada apenas em caso extremo de emergencia.<br/></div><br/>";
+    var memo_joy = "<br/><h3>Memorias Resgatadas - MacJooy<h3/><div id='archivehead'>MacJooy dia que a sensação é como de um sonho, porém não era bem assim, <br/>pois ela podia tocar coisas e andar.<br/><br/>Ela estava em sua antiga casa e parece que o pai dela não passava muito tempo em casa.<br/>O pai dela era um cientista e ela queria ser igual a ele.<br/>Um desenho da mãe e do pai, apenas menções ao pai e nada da mãe.<br/><br/>Tarefas que ela tinha que fazer diariamente, <br/>ela tomava um remédio, o nome ela não sabe ao certo e não sabe para o que serve.<br/><br/>Uma prancheta na parede pedia um jantar para 3 pessoas, pois um amigo do seu pai iria até lá.<br/><br/>Uma Sensação de fome, e uma pessoa realmente apareceu. Ela Brigou contra o intruso.<br/><br/>O cientista era amigo de seu pai.<br/><br/>Kaos abriu um hospital gratuito para a população de Azuria.<br/><br/>Está tudo seguindo o fluxo ideal.<br/></div><br/>";
+    var memo_ka = "<br/><h3>Memorias Resgatadas - Kallista<h3/><div id='archivehead'>infelismte, nada foi escrito<div><br/>";
+
+    $("#inputform").keyup(function(event){
+        if(event.keyCode == 13){
+            liga_getData();
+        }
+    });
+
+    function liga_getData(){
+        $('#info').append('<div style="block">C:/Vazamentos> '+$("#inputform").val()+'<br/>');
+        switch($("#inputform").val()){
+        case "":$('#info').append('</div>');
+                $("#inputform").val()='';
+                break;
+
+        case "help": $('#info').append(help+'</div>');
+                     $("#inputform").val('');
+                     break;        
+        case "dir": $('#info').append(cd+'</div>');
+                     $("#inputform").val('');
+                     break;
+
+        case "Projeto_Embriao.txt": $('#info').append(embriao+'</div>');
+                     $("#inputform").val('');
+                     break;
+        case "Memo_MacJooy.txt": $('#info').append(memo_joy+'</div>');
+                     $("#inputform").val('');
+                     break;        
+        case "Memo_Kallista.txt": $('#info').append(memo_ka+'</div>');
+                     $("#inputform").val('');
+                     break;
+
+                     
+        case "001.png":
+            window.open("./img/001.png", "_blank");
+            $("#inputform").val('');
+            break;
+        case "002.png":
+            window.open("./img/002.png", "_blank");
+            $("#inputform").val('');
+            break;
+        case "003.png":
+            window.open("./img/003.png", "_blank");
+            $("#inputform").val('');
+            break;
+        case "004.png":
+            window.open("./img/004.png", "_blank");
+            $("#inputform").val('');
+            break;
+        case "005.png":
+            window.open("./img/005.png", "_blank");
+            $("#inputform").val('');
+            break;
+        case "006.png":
+            window.open("./img/006.png", "_blank");
+            $("#inputform").val('');
+            break;
+        case "007.png":
+            window.open("./img/007.png", "_blank");
+            $("#inputform").val('');
+            break;
+        case "008.png":
+            window.open("./img/008.png", "_blank");
+            $("#inputform").val('');
+            break;
+        case "009.png":
+            window.open("./img/009.png", "_blank");
+            $("#inputform").val('');
+            break;
+        case "010.png":
+            window.open("./img/010.png", "_blank");
+            $("#inputform").val('');
+            break;
+
+        //Pastas
+        case "cd..":
+                    $("#inputform").val('');
+                    location.href = "index.html";
+                    break; 
+
+        //Reload
+        case "reload":
+                $("#inputform").val('');
+                location.reload();
+                break; 
+        default: $('#info').append('Comando Invalido.</div>');
+                 $("#inputform").val('');
+                 break;
+        }
+    }
+</script>
+</html>

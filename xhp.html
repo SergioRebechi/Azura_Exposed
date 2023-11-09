@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>UVB-AZURIA</title>
+    <link rel="stylesheet" href="./scr/styles.css" />
+    <script src="./scr/main.js"></script>
+</head>
+
+<body>
+<div id="container">
+        <div id="info">
+            <h1 style="display:block"><span style="float:left;">PROTO_P2P - UHV_3.14159GHz - UVB_AZURIA</span> <span  style="float:right;">CRIPTOGRAFIA SSTV ROBOT36</span></h1><br/><br/>
+
+            <h3 style="text-align:center;;display:block;"><span>Digite "help" Para ver os comandos</span>
+                <br/>
+            </h3>
+    </div>
+
+    <div id="workingdiv">   
+        <div id="consoleinput">
+        C:/XHP/><input type="text" id="inputform" autofocus="autofocus" />
+        </div>
+
+
+    </div>
+    </div>
+</body>
+
+<script>
+    
+    var help ="<br/><h3>Comandos de Pastas</h3><div id='archivehead'>dir -------- Mostra pastas/Documentos Disponiveis</div><div id='archivehead'>cd/PASTA --- Entra na pasta selecionada</div><div id='archivehead'>cd.. ------- Sai da pasta atual</div><br/><h3>Comandos da Pagina</h3><div id='archivehead'>reload ----- Recarrega a pagina atual</div><br/>";
+    var cd = "<br/><div id='archivehead'>07/11/2023 PASTA Crip_Testes/</div><div id='archivehead'>03/10/2023 12:23 Kaos_Investigacao.txt</div><div id='archivehead'>02/10/2023 19:43 MacJooy.txt</div><div id='archivehead'>03/10/2023 15:16 Jota_sumiu.txt</div><div id='archivehead'>05/11/2023 01:23 Amigos.txt</div><div id='archivehead'>01/11/2023 00:36 amigos_1.png</div><div id='archivehead'>01/11/2023 00:37 amigos_2.png</div><div id='archivehead'>07/11/2023 22:14 amigos_3.png</div><div id='archivehead'>08/11/2023 04:57 amigos_4.png</div><br/>";
+
+    var lord = "<br/><h2>Meus Amigos</h2><div id='archivehead'>Ai ai...  Azuria, esse belo mundo em que vivemos, por mais que tenha varias pessoas, nem todas são de confianças. <br/>Pelos menos eu não confio em todos...<br/><br/>Atualmente posso contar com toda certeza apenas com 3 pessoas, e espero realmente que eu não esteja enganado.<br/><br/>Lord, por mais q nos conheçamos a pouco tempo. Sinto que o conheço a mais tempo do que parece... <br/>Sinto que talvez ja o conhecia antes de tudo.<br/><br/>Bota... nem tenho o que dizer, é um cara excepcional, simplesmente companheiro e super gente boa. <br/>Além de me ajudar muito com tudo, tanto em puzzles quanto com quando preciso conversar.<br/><br/>E por fim... Kallista... Não tenho como descrever, a Ka é simplesmente uma ótima amiga, <br/>bom pelo menos eu considero ela uma ótima amiga. Não sei se é reciproco, espero que seja... Enfim... <br/><br/>Aqui tenho algumas fotos desses grandes amigos... irei deixa-las ai para recordação, <br/>afinal os últimos ocorridos estão me deixando louco.<br/><br/>PS: Kallista, perdão por não contar nada para você...<br/>PS: Lord... Para de roubar pão na casa do Aqua... Ja avisei que vai dar merda isso. <br/></div><br/>";
+    var kaos = "<br/><div id='archivehead'>Ultima coisa que ouvi dele foi da kalista, ela me disse que um Dummie tinha dado um tiro nele<br/>após isso ele sumiu<br/>não queria falar isso, mas, toda azuria ta uma bagunça depois do kaos ter sumido<br/>irei começar a investigar isso, agr, e dar um jeito de entrar, e eu tenho um plano.</div><br/>"
+    var macjooy = "<br/><div id='archivehead'>A Joy esta bem estranha ultimamente, ainda mais após ter passado pelo experimento, os remédios, tudo isso e bem estranho.<br/>A ka me falou que ela foi parte do projeto memorias (eu acho), e pouco tempo depois o kaos tomou o tiro e sumiu, que fica mais estranho ainda.<br/><br/>Ha alguns dias que ela não acorda, estou começando a me preocupar, espero que ela esteja bem.</div><br/>"
+    var jota = "<br/><div id='archivehead'>Jota sumiu de novo, estranho isso ter acontecido em tao pouco tempo.<br/><br/>Fui junto do Sanches na biblioteca antiga para investigar, tem uma passagem com blocos reforçados,<br/>dei algumas chorus fruits para ajudar ele, a ka, e o aqua na procura.<br/><br/>Não vou junto, pois vou investigar o desaparecimento do kaos hoje.</div><br/>"
+
+    $("#inputform").keyup(function(event){
+        if(event.keyCode == 13){
+            liga_getData();
+        }
+    });
+
+    function liga_getData(){
+        $('#info').append('<div style="block">C:/XHP/> '+$("#inputform").val()+'<br/>');
+        switch($("#inputform").val()){
+        case "":$('#info').append('</div>');
+                $("#inputform").val()='';
+                break;
+        case "help": $('#info').append(help+'</div>');
+                     $("#inputform").val('');
+                     break;        
+        case "dir": $('#info').append(cd+'</div>');
+                     $("#inputform").val('');
+                     break;
+
+        case "Amigos.txt": $('#info').append(lord+'</div>');
+                     $("#inputform").val('');
+                     break;
+        case "Kaos_Investigacao.txt": $('#info').append(kaos+'</div>');
+                     $("#inputform").val('');
+                     break;
+        case "MacJooy.txt": $('#info').append(macjooy+'</div>');
+                     $("#inputform").val('');
+                     break;
+        case "Jota_sumiu.txt": $('#info').append(jota+'</div>');
+                     $("#inputform").val('');
+                     break;
+
+        case "amigos_1.png":
+            window.open("./img/photo1.png", "_blank");
+            $("#inputform").val('');
+            break;
+        case "amigos_2.png":
+            window.open("./img/photo2.png", "_blank");
+            $("#inputform").val('');
+            break;
+        case "amigos_3.png":
+            window.open("./img/photo3.png", "_blank");
+            $("#inputform").val('');
+            break;
+        case "amigos_4.png":
+            window.open("./img/photo4.png", "_blank");
+            $("#inputform").val('');
+            break;
+
+
+        //Pastas
+        case "cd..":
+                    $("#inputform").val('');
+                    location.href = "index.html";
+                    break; 
+
+        case "cd/Crip_Testes": $('#info').append('Pasta Criptografada, Favor contactar o Administrador.</div>');
+                    $("#inputform").val('');
+                    //location.href = "liga.html";
+                    break; 
+
+        //Reload
+        case "reload":
+                $("#inputform").val('');
+                location.reload();
+                break; 
+        default: $('#info').append('Comando Invalido.</div>');
+                 $("#inputform").val('');
+                 break;
+        }
+
+    }
+</script>
+</html>
