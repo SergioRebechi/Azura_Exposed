@@ -33,9 +33,12 @@
 
 
     var help ="<br/><h3>Comandos de Pastas</h3><div id='archivehead'>dir -------- Mostra pastas/Documentos Disponiveis</div><div id='archivehead'>cd/PASTA --- Entra na pasta selecionada</div><div id='archivehead'>cd.. ------- Sai da pasta atual</div><br/><h3>Comandos da Pagina</h3><div id='archivehead'>reload ----- Recarrega a pagina atual</div><br/>";
-    var cd = "<br/><div id='archivehead'>10/11/2023 PASTA Diarios</div><div id='archivehead'>10/11/2023 PASTA XHP</div><div id='archivehead'>08/11/2023 PASTA Vazamentos</div><div id='archivehead'>07/11/2023 16:45 sistema.txt</div><div id='archivehead'>28/10/2023 10:43 matrix_bkg.html</div><div id='archivehead'>07/11/2023 19:45 lord_puzzle.mp4</div><br/>";
+    var cd = "<br/><div id='archivehead'>07/11/2023 13:45 diario-07/11.txt</div><div id='archivehead'>08/11/2023 12:54 diario-08/11.txt</div><div id='archivehead'>09/11/2023 15:12 diario-09/11.txt</div><div id='archivehead'>10/11/2023 15:23 diario-10/11.txt</div><br/>";
 
-    var sistema = "<br/><div id='archivehead'>Sistema Operacional: UVB-AZURIA</div><div id='archivehead'>Versão: 5.2.6a (z36478) [build 95367453893]</div><div id='archivehead'>Data de Lançamento: 07/11/2023</div><div id='archivehead'>Desenvolvedor: XinguHeProd</div><div id='archivehead'>Sistema: P2P em UHV</div><div id='archivehead'>Freq: 3.14159 GHz</div><br/>";
+    var diario1 = "<br/><h3>Diario: 07/11/2023</h3><div id='archivehead'>Chamo de missão suicida <br/>Talvez pra isso que eu sirva<br/>Pra ser usado pra tapar buraco em outras vidas<br/>Enquanto a minha tem um furo com o formato de um cara<br/>Que eu busquei do outro lado e no caminho abri camadas<br/>Camadas<br/>Portas de mil camadas<br/>Várias das vidas que eu baguncei, larguei fechando nada<br/>Então o ar passa, passa pelas frestas geladas<br/>De várias portas que logo estarão fechadas</div><br/>";
+    var diario2 = "<br/><h3>Diario: 08/11/2023</h3><div id='archivehead'>Eu entendo,<br/>que tens outras vontades<br/>Uma divindade, não tem tempo para os covardes,<br/>os tolos e é tarde, pra nós,<br/>ainda escutas minha voz?<br/></div><br/>";
+    var diario3 = "<br/><h3>Diario: 09/11/2023</h3><div id='archivehead'>Quer conhecer mais sobre o corpo humano?<br/>Cala a boca e me beija no fundo do oceano<br/>Tavam te xingando no vídeo de Chernobyl<br/>Quem dá dislike alimenta o lobisomem do Brasil<br/>COMO É FEITO UM FUSIL???<br/></div><br/>";
+    var diario4 = "<br/><h3>Diario: 10/11/2023</h3><div id='archivehead'>atrás do queijo perfeito<br/>elas me chamam de rato<br/>de fato eu mordo no beijo<br/>mas nunca cuspi no prato<br/>e olha q eu comi varios<br/>ja melei mt meus labio<br/>mas sempre do queijo mais fresco<br/>desejo pros aliado<br/></div><br/>";
 
     $("#inputform").keyup(function(event){
         if(event.keyCode == 13){
@@ -56,36 +59,24 @@
         case "dir": $('#info').append(cd+'</div>');
                      $("#inputform").val('');
                      break;
-        case "sistema.txt": $('#info').append(sistema+'</div>');
+        case "diario-07/11.txt": $('#info').append(diario1+'</div>');
+                     $("#inputform").val('');
+                     break;
+        case "diario-08/11.txt": $('#info').append(diario2+'</div>');
+                     $("#inputform").val('');
+                     break;
+        case "diario-09/11.txt": $('#info').append(diario3+'</div>');
+                     $("#inputform").val('');
+                     break;
+        case "diario-10/11.txt": $('#info').append(diario3+'</div>');
                      $("#inputform").val('');
                      break;
 
         //Pastas
-        case "cd/Diarios":
+        case "cd..":
                     $("#inputform").val('');
-                    location.href = "diarios.html";
+                    location.href = "index.html";
                     break; 
-        case "cd/XHP":
-                    $("#inputform").val('');
-                    location.href = "xhp.html";
-                    break; 
-        case "cd/Vazamentos":
-                    $("#inputform").val('');
-                    location.href = "vazamentos.html";
-                    break; 
-
-        case "matrix_bkg.html":
-                    $("#inputform").val('');
-                    location.href = "./Matrix/matrix.html";
-                    break; 
-        case "cd//": $('#info').append('<br/></div>');
-                 $("#inputform").val('');
-                 break;
-
-        case "lord_puzzle.mp4":
-            window.open("./videos/lord.mp4", "_blank");
-            $("#inputform").val('');
-            break;
 
         //Reload
         case "reload":
