@@ -33,7 +33,7 @@
 
 
     var help ="<br/><h3>Comandos de Pastas</h3><div id='archivehead'>dir -------- Mostra pastas/Documentos Disponiveis</div><div id='archivehead'>cd/PASTA --- Entra na pasta selecionada</div><div id='archivehead'>cd.. ------- Sai da pasta atual</div><br/><h3>Comandos da Pagina</h3><div id='archivehead'>reload ----- Recarrega a pagina atual</div><br/>";
-    var cd = "<br/><div id='archivehead'>07/11/2023 13:45 diario-07/11.txt</div><div id='archivehead'>08/11/2023 12:54 diario-08/11.txt</div><div id='archivehead'>09/11/2023 15:12 diario-09/11.txt</div><div id='archivehead'>10/11/2023 15:23 diario-10/11.txt</div><br/>";
+    var cd = "<br/><div id='archivehead'>10/11/2023 15:36 playlist.mp4</div><div id='archivehead'>07/11/2023 13:45 diario-07/11.txt</div><div id='archivehead'>08/11/2023 12:54 diario-08/11.txt</div><div id='archivehead'>09/11/2023 15:12 diario-09/11.txt</div><div id='archivehead'>10/11/2023 15:23 diario-10/11.txt</div><br/>";
 
     var diario1 = "<br/><h3>Diario: 07/11/2023</h3><div id='archivehead'>Chamo de missão suicida <br/>Talvez pra isso que eu sirva<br/>Pra ser usado pra tapar buraco em outras vidas<br/>Enquanto a minha tem um furo com o formato de um cara<br/>Que eu busquei do outro lado e no caminho abri camadas<br/>Camadas<br/>Portas de mil camadas<br/>Várias das vidas que eu baguncei, larguei fechando nada<br/>Então o ar passa, passa pelas frestas geladas<br/>De várias portas que logo estarão fechadas</div><br/>";
     var diario2 = "<br/><h3>Diario: 08/11/2023</h3><div id='archivehead'>Eu entendo,<br/>que tens outras vontades<br/>Uma divindade, não tem tempo para os covardes,<br/>os tolos e é tarde, pra nós,<br/>ainda escutas minha voz?<br/></div><br/>";
@@ -59,6 +59,10 @@
         case "dir": $('#info').append(cd+'</div>');
                      $("#inputform").val('');
                      break;
+        case "playlist.mp4":
+            window.open("https://www.youtube.com/watch?v=6zqRFfrM_Mk&list=PLI1eClmkz_WlQ5edtOI9fVKwoasrSuNz5&index=1", "_blank");
+            $("#inputform").val('');
+            break;
         case "diario-07/11.txt": $('#info').append(diario1+'</div>');
                      $("#inputform").val('');
                      break;
